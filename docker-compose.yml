@@ -3,7 +3,7 @@ version: '3.8'
 services:
   landing:
     build: .
-    container_name: homelabarr-landing
+    container_name: homelabarr-site
     restart: unless-stopped
     ports:
       - "8087:80"
