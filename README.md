@@ -2,9 +2,9 @@
 
 The official landing page for HomelabARR - A comprehensive Docker-based application for managing and monitoring your homelab container applications.
 
-![Interface Preview](public/screenshot1.png)
+![Interface Preview](https://github.com/smashingtags/homelabarr-assets/blob/main/screenshots/homelabarr-website.png?raw=true)
 
-🔗 **[Live Demo](https://demo.homelabarr.com)**
+🔗 **[Live Demo](https://homelabarr.com)**
 
 ## 🚀 Features
 
@@ -106,7 +106,7 @@ The default nginx configuration in `nginx.conf` includes:
 ## 📞 Support
 
 - [Discord Server](https://discord.gg/Pc7mXX786x)
-- [Demo Site](https://demo.homelabarr.com)
+- [Demo Site](https://homelabarr.com)
 - [GitHub Issues](https://github.com/smashingtags/homelabarr/issues)
 
 ## 🌟 Related Projects
