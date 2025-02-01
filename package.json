@@ -1,0 +1,24 @@
+{
+  "name": "homelabarr-landing",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "docker:build": "docker build -t homelabarr-landing .",
+    "docker:run": "docker run -p 4321:4321 homelabarr-landing"
+  },
+  "dependencies": {
+    "astro": "^4.15.3",
+    "photoswipe": "^5.4.4",
+    "@octokit/rest": "^20.0.2",
+    "lucide-react": "^0.363.0"
+  },
+  "description": "Landing page for HomelabARR - A comprehensive Docker-based application for managing and monitoring your homelab container applications",
+  "author": "smashingtags",
+  "license": "MIT"
+}

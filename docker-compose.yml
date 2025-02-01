@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  landing:
+    build: .
+    container_name: homelabarr-landing
+    restart: unless-stopped
+    ports:
+      - "8087:80"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

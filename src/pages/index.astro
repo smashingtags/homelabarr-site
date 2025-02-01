@@ -1,0 +1,378 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Stats from '../components/Stats.astro';
+import 'photoswipe/style.css'
+---
+
+<Layout title="HomelabARR - Docker Container Management">
+	<main>
+		<nav class="navigation">
+			<div class="nav-links">
+				<a href="https://github.com/smashingtags/homelabarr" class="nav-link">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+						<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+						<path d="M9 18c-4.51 2-5-2-7-2" />
+					</svg>
+					<span>GitHub</span>
+				</a>
+				<a href="https://discord.gg/Pc7mXX786x" class="nav-link">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+						<circle cx="9" cy="12" r="1" />
+						<circle cx="15" cy="12" r="1" />
+						<path d="M7.5 7.5c3.5-1 5.5-1 9 0" />
+						<path d="M7.5 16.5c3.5 1 5.5 1 9 0" />
+						<path d="M15.5 17c0 1 1.5 3 2 3 1.5 0 2.833-1.667 3.5-3 .667-1.667.5-5.833-1.5-11.5-1.457-1.015-3-1.34-4.5-1.5l-1 2.5" />
+						<path d="M8.5 17c0 1-1.356 3-1.832 3-1.429 0-2.698-1.667-3.333-3-.635-1.667-.476-5.833 1.428-11.5C6.151 4.485 7.545 4.16 9 4l1 2.5" />
+					</svg>
+					<span>Discord</span>
+				</a>
+			</div>
+		</nav>
+
+		<div class="header">
+			<h1><span class="text-gradient">HomelabARR</span></h1>
+			<p class="tagline">Beautiful Docker container management for your homelab.</p>
+			<div class="cta-buttons">
+				<a href="https://demo.homelabarr.com" class="primary-button">
+					Try Live Demo
+				</a>
+				<a href="https://github.com/smashingtags/homelabarr#installation" class="secondary-button">
+					Install Now
+				</a>
+			</div>
+		</div>
+
+		<p class="instructions">
+			A beautiful, modern web interface for managing your home lab Docker containers.<br />
+			<strong>Quick Start:</strong> Deploy with Docker Compose in minutes.
+		</p>
+
+		<section class="features">
+			<h2>Key Features</h2>
+			<div class="feature-grid">
+				<div class="feature">
+					<h3>🚀 One-click Deployment</h3>
+					<p>Deploy applications with a single click through our intuitive interface.</p>
+				</div>
+				<div class="feature">
+					<h3>📊 Real-time Monitoring</h3>
+					<p>Monitor container statistics, health, and logs in real-time.</p>
+				</div>
+				<div class="feature">
+					<h3>🔄 Container Management</h3>
+					<p>Start, stop, restart, and remove containers with ease.</p>
+				</div>
+				<div class="feature">
+					<h3>🏆 Achievement System</h3>
+					<p>Track container uptime and earn achievements.</p>
+				</div>
+			</div>
+		</section>
+		<section class="screenshots">
+			<div class="screenshot-grid">
+				<a 
+					class="screenshot pswp-gallery" 
+					href="/screenshot1.png" 
+					data-pswp-width="1920" 
+					data-pswp-height="1080"
+				>
+					<img src="/screenshot1.png" alt="Container Management View" loading="lazy"/>
+					<div class="screenshot-caption">
+						<h3>Deployed Applications</h3>
+						<p>Monitor and manage your running containers with ease</p>
+					</div>
+				</a>
+				<a 
+					class="screenshot pswp-gallery" 
+					href="/screenshot2.png" 
+					data-pswp-width="1920" 
+					data-pswp-height="1080"
+				>
+					<img src="/screenshot2.png" alt="Application Grid View" loading="lazy"/>
+					<div class="screenshot-caption">
+						<h3>Application Library</h3>
+						<p>Browse and deploy from our curated collection</p>
+					</div>
+				</a>
+				<a 
+					class="screenshot pswp-gallery" 
+					href="/screenshot3.png" 
+					data-pswp-width="1920" 
+					data-pswp-height="1080"
+				>
+					<img src="/screenshot3.png" alt="Leaderboard View" loading="lazy"/>
+					<div class="screenshot-caption">
+						<h3>Achievement System</h3>
+						<p>Track your progress and compete with others</p>
+					</div>
+				</a>
+			</div>
+		</section>
+
+		<Stats 
+			githubRepo="smashingtags/homelabarr"
+			discordInvite="Pc7mXX786x"
+		/>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://github.com/smashingtags/homelabarr"
+				title="GitHub Repository"
+				body="Access the source code, report issues, and contribute to the project."
+			/>
+			<Card
+				href="https://demo.homelabarr.com"
+				title="Live Demo"
+				body="Try out HomelabARR with our interactive demo environment."
+			/>
+			<Card
+				href="https://discord.gg/Pc7mXX786x"
+				title="Join our Discord"
+				body="Get help, share ideas, and connect with the HomelabARR community."
+			/>
+			<Card
+				href="https://hub.docker.com/repository/docker/smashingtags/homelabarr-frontend"
+				title="Docker Hub Frontend"
+				body="Pull the latest frontend container image and get started."
+			/>
+			<Card
+				href="https://hub.docker.com/repository/docker/smashingtags/homelabarr-backend"
+				title="Docker Hub Backend"
+				body="Access the backend container image for your deployment."
+			/>
+		</ul>
+
+		<script>
+			import PhotoSwipe from 'photoswipe';
+			import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+			const lightbox = new PhotoSwipeLightbox({
+				gallery: '.screenshot-grid',
+				children: '.screenshot',
+				pswpModule: PhotoSwipe
+			});
+
+			lightbox.init();
+		</script>
+	</main>
+</Layout>
+
+<style>
+	.navigation {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		backdrop-filter: blur(20px);
+		background: rgba(19, 21, 26, 0.8);
+		z-index: 100;
+		padding: 1rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+	.nav-links {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: flex-end;
+		gap: 1.5rem;
+	}
+	.nav-link {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: #fff;
+		text-decoration: none;
+		font-size: 0.9rem;
+		opacity: 0.8;
+		transition: opacity 0.2s ease;
+	}
+	.nav-link:hover {
+		opacity: 1;
+	}
+	.header {
+		text-align: center;
+		padding: 8rem 0 4rem;
+	}
+	.tagline {
+		font-size: 1.5rem;
+		color: #fff;
+		opacity: 0.9;
+		margin: 1.5rem 0 3rem;
+		font-weight: 300;
+	}
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+	}
+	.primary-button, .secondary-button {
+		padding: 0.8rem 2rem;
+		border-radius: 100px;
+		font-weight: 500;
+		font-size: 1.1rem;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+	.primary-button {
+		background: rgb(var(--accent));
+		color: white;
+	}
+	.primary-button:hover {
+		background: rgb(var(--accent-light));
+	}
+	.secondary-button {
+		background: rgba(255, 255, 255, 0.1);
+		color: white;
+	}
+	.secondary-button:hover {
+		background: rgba(255, 255, 255, 0.2);
+		transform: translateY(-2px);
+	}
+	.icon {
+		font-size: 1.2rem;
+	}
+	.badges {
+		display: flex;
+		gap: 0.5rem;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+	.badges img {
+		height: 20px;
+	}
+	.features {
+		margin-top: 4rem;
+		padding: 2rem;
+		background: rgba(var(--accent-dark), 0.1);
+		border-radius: 8px;
+	}
+	.features h2 {
+		text-align: center;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		color: rgb(var(--accent-light));
+	}
+	.feature-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	.feature {
+		padding: 1.5rem;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 0.2);
+	}
+	.feature h3 {
+		color: rgb(var(--accent-light));
+		margin-bottom: 0.5rem;
+		font-size: 1.2rem;
+	}
+	.feature p {
+		color: #ccc;
+		font-size: 0.9rem;
+	}
+	.screenshots {
+		margin-top: 4rem;
+		padding: 2rem;
+		background: rgba(var(--accent-dark), 0.1);
+		border-radius: 8px;
+	}
+	.screenshots h2 {
+		text-align: center;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		color: rgb(var(--accent-light));
+	}
+	.screenshot-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+	.screenshot {
+		background: rgba(19, 21, 26, 0.5);
+		border-radius: 8px;
+		display: block;
+		text-decoration: none;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		transition: all 0.3s ease;
+		cursor: pointer;
+		position: relative;
+	}
+	.screenshot:hover {
+		transform: translateY(-5px);
+		border-color: rgba(var(--accent-light), 0.3);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	}
+	.screenshot img {
+		width: 100%;
+		height: auto;
+		display: block;
+		aspect-ratio: 16/9;
+		object-fit: contain;
+		background: #000;
+	}
+	.screenshot-caption {
+		padding: 1rem;
+	}
+	.screenshot-caption h3 {
+		color: white;
+		margin: 0 0 0.5rem;
+		font-size: 1.1rem;
+	}
+	.screenshot-caption p {
+		color: rgba(255, 255, 255, 0.7);
+		margin: 0;
+		line-height: 1.4;
+		font-size: 0.9rem;
+	}
+	main {
+		margin: auto;
+		padding: 0;
+		width: 1200px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 5rem;
+		font-weight: 800;
+		line-height: 1;
+		margin: 0;
+		letter-spacing: -0.02em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1.5rem;
+		padding: 0;
+		margin-bottom: 2rem;
+	}
+</style>

@@ -1,0 +1,152 @@
+---
+interface Props {
+  githubRepo: string;
+  discordInvite: string;
+}
+
+const { githubRepo, discordInvite } = Astro.props;
+---
+
+<div class="stats-container">
+  <div class="stat-item">
+    <div class="stat-icon">⭐</div>
+    <div class="stat-value" id="github-stars">...</div>
+    <div class="stat-label">GitHub Stars</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-icon">👥</div>
+    <div class="stat-value" id="discord-members">...</div>
+    <div class="stat-label">Discord Members</div>
+  </div>
+</div>
+
+<div id="star-celebration" class="celebration">🎉</div>
+
+<script define:vars={{ githubRepo, discordInvite }}>
+// Fetch GitHub stars
+async function getGitHubStars() {
+  try {
+    const response = await fetch(`https://api.github.com/repos/${githubRepo}`);
+    const data = await response.json();
+    const starsElement = document.getElementById('github-stars');
+    if (starsElement) {
+      const currentStars = parseInt(starsElement.textContent) || 0;
+      const newStars = data.stargazers_count;
+      
+      if (newStars > currentStars) {
+        const celebration = document.getElementById('star-celebration');
+        celebration.style.display = 'block';
+        setTimeout(() => {
+          celebration.style.display = 'none';
+        }, 2000);
+      }
+      
+      starsElement.textContent = newStars.toLocaleString();
+    }
+  } catch (error) {
+    console.error('Error fetching GitHub stars:', error);
+  }
+}
+
+// Fetch Discord members
+async function getDiscordMembers() {
+  try {
+    const response = await fetch(`https://discord.com/api/v9/invites/${discordInvite.split('/').pop()}?with_counts=true`);
+    const data = await response.json();
+    const membersElement = document.getElementById('discord-members');
+    if (membersElement) {
+      membersElement.textContent = data.approximate_member_count.toLocaleString();
+    }
+  } catch (error) {
+    console.error('Error fetching Discord members:', error);
+  }
+}
+
+// Update container count with smooth animation
+async function updateContainerCount() {
+  const countElement = document.getElementById('container-count');
+  if (countElement) {
+    const oldCount = baseContainerCount;
+    baseContainerCount += getRandomChange();
+    // Ensure count never goes below 5000
+    baseContainerCount = Math.max(5000, baseContainerCount);
+    animateValue(countElement, oldCount, baseContainerCount, 800);
+  }
+}
+
+// Initial load
+getGitHubStars();
+getDiscordMembers();
+
+// Update periodically
+setInterval(getGitHubStars, 60000); // Every minute
+</script>
+
+<style>
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(var(--accent-dark), 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(var(--accent-light), 0.3);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(var(--accent-light));
+  margin: 0.5rem 0;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.celebration {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  animation: celebrate 2s ease-out;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+</style>
