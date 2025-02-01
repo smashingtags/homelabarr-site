@@ -22,12 +22,20 @@ The official landing page for HomelabARR - A comprehensive Docker-based applicat
 - [Docker](https://www.docker.com/) - Containerization
 - [Nginx](https://nginx.org/) - Web Server
 
+## 🏃‍♂️ Quick Start
+```bash
+   git clone https://github.com/smashingtags/homelabarr-site.git
+   cd homelabarr-site
+   docker compose -f homelabarr-site.yml up -d
+   ```
+The app will be available on http://localhost:8087
+
 ## 🏃‍♂️ Local Development
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/smashingtags/homelabarr-landing.git
-   cd homelabarr-landing
+   git clone https://github.com/smashingtags/homelabarr-site.git
+   cd homelabarr-site
    ```
 
 2. Install dependencies:
@@ -107,7 +115,7 @@ The default nginx configuration in `nginx.conf` includes:
 
 - [Discord Server](https://discord.gg/Pc7mXX786x)
 - [Demo Site](https://homelabarr.com)
-- [GitHub Issues](https://github.com/smashingtags/homelabarr/issues)
+- [GitHub Issues](https://github.com/smashingtags/homelabarr-site/issues)
 
 ## 🌟 Related Projects
 
