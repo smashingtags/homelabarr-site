@@ -2,7 +2,7 @@
 
 The official landing page for HomelabARR - A comprehensive Docker-based application for managing and monitoring your homelab container applications.
 
-![Interface Preview](https://github.com/smashingtags/homelabarr-assets/blob/main/screenshots/homelabarr-website.png?raw=true)
+![Interface Preview](https://github.com/smashingtags/homelabarr-assets/blob/main/screenshots/homelabarr-homescreen.gif?raw=true)
 
 🔗 **[Live Demo](https://homelabarr.com)**
 
