@@ -5,19 +5,21 @@ import Stats from '../components/Stats.astro';
 import 'photoswipe/style.css'
 ---
 
-<Layout title="HomelabARR - Docker Container Management">
+<Layout title="HomelabARR - Open Homelab Platform">
 	<main>
 		<nav class="navigation">
 			<div class="nav-links">
+				<a href="/pricing" class="nav-link">Pricing</a>
+				<a href="https://docs.homelabarr.com" class="nav-link">Docs</a>
 				<a href="https://github.com/smashingtags/homelabarr" class="nav-link">
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
 						<path d="M9 18c-4.51 2-5-2-7-2" />
 					</svg>
 					<span>GitHub</span>
 				</a>
 				<a href="https://discord.gg/Pc7mXX786x" class="nav-link">
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<circle cx="9" cy="12" r="1" />
 						<circle cx="15" cy="12" r="1" />
 						<path d="M7.5 7.5c3.5-1 5.5-1 9 0" />
@@ -32,82 +34,120 @@ import 'photoswipe/style.css'
 
 		<div class="header">
 			<h1><span class="text-gradient">HomelabARR</span></h1>
-			<p class="tagline">Beautiful Docker container management for your homelab.</p>
+			<p class="tagline">The Open Homelab Platform</p>
+			<p class="subtagline">Docker-native. Community-driven. No lock-in.</p>
 			<div class="cta-buttons">
-				<a href="https://demo.homelabarr.com" class="primary-button">
-					Try Live Demo
+				<a href="https://github.com/smashingtags/homelabarr" class="primary-button">
+					Download CE Free
 				</a>
-				<a href="https://github.com/smashingtags/homelabarr?tab=readme-ov-file#%EF%B8%8F-installation" class="secondary-button">
-					Install Now
+				<a href="#pricing" class="secondary-button">
+					Get PE $99
 				</a>
 			</div>
 		</div>
 
-		<p class="instructions">
-			A beautiful, modern web interface for managing your home lab Docker containers.<br />
-			<strong>Quick Start:</strong> Deploy with Docker Compose in minutes.
-		</p>
-		<img class="recording-gif" src="https://github.com/smashingtags/homelabarr-assets/blob/main/screenshots/homelabarr-app-recording.gif?raw=true" alt="HomelabARR App Recording" />
-
-		<section class="features">
-			<h2>Key Features</h2>
-			<div class="feature-grid">
-				<div class="feature">
-					<h3>🚀 One-click Deployment</h3>
-					<p>Deploy applications with a single click through our intuitive interface.</p>
+		<section class="editions">
+			<div class="edition-grid">
+				<div class="edition ce">
+					<div class="edition-badge">CE</div>
+					<h3>Community Edition</h3>
+					<p class="price">Free</p>
+					<ul>
+						<li>Docker container management</li>
+						<li>137+ pre-configured apps</li>
+						<li>Real-time monitoring</li>
+						<li>Community support</li>
+						<li>Open source</li>
+					</ul>
+					<a href="https://github.com/smashingtags/homelabarr" class="edition-cta">Download Free</a>
 				</div>
-				<div class="feature">
-					<h3>📊 Real-time Monitoring</h3>
-					<p>Monitor container statistics, health, and logs in real-time.</p>
-				</div>
-				<div class="feature">
-					<h3>🔄 Container Management</h3>
-					<p>Start, stop, restart, and remove containers with ease.</p>
-				</div>
-				<div class="feature">
-					<h3>🏆 Achievement System</h3>
-					<p>Track container uptime and earn achievements.</p>
+				<div class="edition pe">
+					<div class="edition-badge recommended">PE</div>
+					<h3>Professional Edition</h3>
+					<p class="price">$99</p>
+					<ul>
+						<li>Everything in CE, plus:</li>
+						<li>Theme Marketplace</li>
+						<li>Plugin Ecosystem</li>
+						<li>Priority support</li>
+						<li>Lifetime updates</li>
+					</ul>
+					<a href="#buy" class="edition-cta primary">Buy Now</a>
 				</div>
 			</div>
 		</section>
-		<section class="screenshots">
-			<div class="screenshot-grid">
-				<a 
-					class="screenshot pswp-gallery" 
-					href="/screenshot1.png" 
-					data-pswp-width="1920" 
-					data-pswp-height="1080"
-				>
-					<img src="/screenshot1.png" alt="Container Management View" loading="lazy"/>
-					<div class="screenshot-caption">
-						<h3>Deployed Applications</h3>
-						<p>Monitor and manage your running containers with ease</p>
-					</div>
-				</a>
-				<a 
-					class="screenshot pswp-gallery" 
-					href="/screenshot2.png" 
-					data-pswp-width="1920" 
-					data-pswp-height="1080"
-				>
-					<img src="/screenshot2.png" alt="Application Grid View" loading="lazy"/>
-					<div class="screenshot-caption">
-						<h3>Application Library</h3>
-						<p>Browse and deploy from our curated collection</p>
-					</div>
-				</a>
-				<a 
-					class="screenshot pswp-gallery" 
-					href="/screenshot3.png" 
-					data-pswp-width="1920" 
-					data-pswp-height="1080"
-				>
-					<img src="/screenshot3.png" alt="Leaderboard View" loading="lazy"/>
-					<div class="screenshot-caption">
-						<h3>Achievement System</h3>
-						<p>Track your progress and compete with others</p>
-					</div>
-				</a>
+
+		<section class="comparison">
+			<h2>Why HomelabARR?</h2>
+			<table class="compare-table">
+				<thead>
+					<tr>
+						<th>Feature</th>
+						<th>HomelabARR</th>
+						<th>HexOS</th>
+						<th>Unraid</th>
+						<th>TrueNAS</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Open Source</td>
+						<td class="yes">✓</td>
+						<td class="no">✗</td>
+						<td class="partial">Partial</td>
+						<td class="yes">✓</td>
+					</tr>
+					<tr>
+						<td>Docker Native</td>
+						<td class="yes">✓</td>
+						<td class="no">Jails/VMs</td>
+						<td class="yes">✓</td>
+						<td class="no">Limited</td>
+					</tr>
+					<tr>
+						<td>Creator Marketplace</td>
+						<td class="yes">✓</td>
+						<td class="no">✗</td>
+						<td class="no">✗</td>
+						<td class="no">✗</td>
+					</tr>
+					<tr>
+						<td>Hardware Agnostic</td>
+						<td class="yes">✓</td>
+						<td class="yes">✓</td>
+						<td class="yes">✓</td>
+						<td class="partial">Limited</td>
+					</tr>
+					<tr>
+						<td>Price</td>
+						<td class="price-cell">Free / $99</td>
+						<td class="price-cell">$199</td>
+						<td class="price-cell">$59-129</td>
+						<td class="price-cell">Free / Enterprise</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="features">
+			<h2>Features</h2>
+			<div class="feature-grid">
+				<div class="feature">
+					<h3>🚀 One-click Deployment</h3>
+					<p>Deploy 137+ applications with a single click. No YAML required.</p>
+				</div>
+				<div class="feature">
+					<h3>📊 Real-time Monitoring</h3>
+					<p>Monitor container stats, health, and logs in real-time.</p>
+				</div>
+				<div class="feature">
+					<h3>🎨 Theme Marketplace</h3>
+					<p>Customize your dashboard with community-created themes.</p>
+				</div>
+				<div class="feature">
+					<h3>🔌 Plugin Ecosystem</h3>
+					<p>Extend functionality with plugins from the community.</p>
+				</div>
 			</div>
 		</section>
 
@@ -115,46 +155,24 @@ import 'photoswipe/style.css'
 			githubRepo="smashingtags/homelabarr"
 			discordInvite="Pc7mXX786x"
 		/>
+
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://github.com/smashingtags/homelabarr"
 				title="GitHub Repository"
-				body="Access the source code, report issues, and contribute to the project."
+				body="Access the source code and contribute to the project."
 			/>
 			<Card
 				href="https://demo.homelabarr.com"
 				title="Live Demo"
-				body="Try out HomelabARR with our interactive demo environment."
+				body="Try HomelabARR with our interactive demo."
 			/>
 			<Card
 				href="https://discord.gg/Pc7mXX786x"
 				title="Join our Discord"
-				body="Get help, share ideas, and connect with the HomelabARR community."
-			/>
-			<Card
-				href="https://hub.docker.com/repository/docker/smashingtags/homelabarr-frontend"
-				title="Docker Hub Frontend"
-				body="Pull the latest frontend container image and get started."
-			/>
-			<Card
-				href="https://hub.docker.com/repository/docker/smashingtags/homelabarr-backend"
-				title="Docker Hub Backend"
-				body="Access the backend container image for your deployment."
+				body="Get help and connect with the community."
 			/>
 		</ul>
-
-		<script>
-			import PhotoSwipe from 'photoswipe';
-			import PhotoSwipeLightbox from 'photoswipe/lightbox';
-
-			const lightbox = new PhotoSwipeLightbox({
-				gallery: '.screenshot-grid',
-				children: '.screenshot',
-				pswpModule: PhotoSwipe
-			});
-
-			lightbox.init();
-		</script>
 	</main>
 </Layout>
 
@@ -192,14 +210,18 @@ import 'photoswipe/style.css'
 	}
 	.header {
 		text-align: center;
-		padding: 8rem 0 4rem;
+		padding: 8rem 0 2rem;
 	}
 	.tagline {
-		font-size: 1.5rem;
+		font-size: 2rem;
 		color: #fff;
-		opacity: 0.9;
-		margin: 1.5rem 0 3rem;
-		font-weight: 300;
+		margin: 0.5rem 0;
+		font-weight: 600;
+	}
+	.subtagline {
+		font-size: 1.2rem;
+		color: rgba(255,255,255,0.7);
+		margin-bottom: 2rem;
 	}
 	.cta-buttons {
 		display: flex;
@@ -227,25 +249,117 @@ import 'photoswipe/style.css'
 	}
 	.secondary-button:hover {
 		background: rgba(255, 255, 255, 0.2);
-		transform: translateY(-2px);
 	}
-	.icon {
-		font-size: 1.2rem;
+	.editions {
+		margin: 4rem 0;
+		padding: 2rem;
 	}
-	.badges {
-		display: flex;
-		gap: 0.5rem;
-		justify-content: center;
+	.edition-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+	.edition {
+		padding: 2rem;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 16px;
+		border: 2px solid rgba(var(--accent-light), 0.2);
+		text-align: center;
+	}
+	.edition.pe {
+		border-color: rgb(var(--accent));
+		background: rgba(var(--accent), 0.1);
+	}
+	.edition-badge {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background: rgba(255,255,255,0.1);
+		border-radius: 20px;
+		font-size: 0.9rem;
+		margin-bottom: 1rem;
+	}
+	.edition-badge.recommended {
+		background: rgb(var(--accent));
+		color: white;
+	}
+	.edition h3 {
+		color: rgb(var(--accent-light));
+		margin-bottom: 0.5rem;
+	}
+	.edition .price {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin: 1rem 0;
+	}
+	.edition ul {
+		list-style: none;
+		padding: 0;
+		text-align: left;
+		margin: 1.5rem 0;
+	}
+	.edition li {
+		padding: 0.5rem 0;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+	.edition-cta {
+		display: block;
+		padding: 1rem;
+		background: rgba(255,255,255,0.1);
+		color: white;
+		text-decoration: none;
+		border-radius: 8px;
 		margin-top: 1rem;
+		transition: background 0.2s;
 	}
-	.badges img {
-		height: 20px;
+	.edition-cta:hover {
+		background: rgba(255,255,255,0.2);
+	}
+	.edition-cta.primary {
+		background: rgb(var(--accent));
+	}
+	.edition-cta.primary:hover {
+		background: rgb(var(--accent-light));
+	}
+	.comparison {
+		margin: 4rem 0;
+		padding: 2rem;
+		background: rgba(var(--accent-dark), 0.1);
+		border-radius: 16px;
+	}
+	.comparison h2 {
+		text-align: center;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		color: rgb(var(--accent-light));
+	}
+	.compare-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	.compare-table th,
+	.compare-table td {
+		padding: 1rem;
+		text-align: left;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+	.compare-table th {
+		color: rgb(var(--accent-light));
+	}
+	.compare-table .yes {
+		color: #4ade80;
+		font-weight: 600;
+	}
+	.compare-table .no {
+		color: #f87171;
+	}
+	.compare-table .partial {
+		color: #fbbf24;
 	}
 	.features {
 		margin-top: 4rem;
 		padding: 2rem;
-		background: rgba(var(--accent-dark), 0.1);
-		border-radius: 8px;
 	}
 	.features h2 {
 		text-align: center;
@@ -267,66 +381,6 @@ import 'photoswipe/style.css'
 	.feature h3 {
 		color: rgb(var(--accent-light));
 		margin-bottom: 0.5rem;
-		font-size: 1.2rem;
-	}
-	.feature p {
-		color: #ccc;
-		font-size: 0.9rem;
-	}
-	.screenshots {
-		margin-top: 4rem;
-		padding: 2rem;
-		background: rgba(var(--accent-dark), 0.1);
-		border-radius: 8px;
-	}
-	.screenshots h2 {
-		text-align: center;
-		font-size: 2rem;
-		margin-bottom: 2rem;
-		color: rgb(var(--accent-light));
-	}
-	.screenshot-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-	}
-	.screenshot {
-		background: rgba(19, 21, 26, 0.5);
-		border-radius: 8px;
-		display: block;
-		text-decoration: none;
-		overflow: hidden;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		transition: all 0.3s ease;
-		cursor: pointer;
-		position: relative;
-	}
-	.screenshot:hover {
-		transform: translateY(-5px);
-		border-color: rgba(var(--accent-light), 0.3);
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-	}
-	.screenshot img {
-		width: 100%;
-		height: auto;
-		display: block;
-		aspect-ratio: 16/9;
-		object-fit: contain;
-		background: #000;
-	}
-	.screenshot-caption {
-		padding: 1rem;
-	}
-	.screenshot-caption h3 {
-		color: white;
-		margin: 0 0 0.5rem;
-		font-size: 1.1rem;
-	}
-	.screenshot-caption p {
-		color: rgba(255, 255, 255, 0.7);
-		margin: 0;
-		line-height: 1.4;
-		font-size: 0.9rem;
 	}
 	main {
 		margin: auto;
@@ -342,46 +396,17 @@ import 'photoswipe/style.css'
 		font-weight: 800;
 		line-height: 1;
 		margin: 0;
-		letter-spacing: -0.02em;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
 	}
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1.5rem;
 		padding: 0;
-		margin-bottom: 2rem;
-	}
-
-	/* New styling for the inserted GIF */
-	.recording-gif {
-		max-width: 100%;
-		height: auto;
-		display: block;
-		margin: 1rem auto;
+		margin: 2rem 0;
 	}
 </style>
