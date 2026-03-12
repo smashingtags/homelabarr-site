@@ -13,7 +13,7 @@
     "docker:run": "docker run -p 4321:4321 homelabarr-landing"
   },
   "dependencies": {
-    "astro": "^4.15.3",
+    "astro": "^5.15.9",
     "photoswipe": "^5.4.4",
     "@octokit/rest": "^20.0.2",
     "lucide-react": "^0.363.0"
